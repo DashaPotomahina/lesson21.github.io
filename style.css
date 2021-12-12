@@ -1,0 +1,75 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 280px 280px 280px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "child-1 child-1 child-2 child3"
+      "child-1 child-1 child-2 child-4"
+      "child-1 child-1 child-5 child-5";
+      color: white;
+      font-size: 20px;
+  }
+  .child-1 {
+       grid-area: child-1; 
+       background-color: white;
+       color: black;
+       padding: 10px;
+       display: flex;
+       flex-direction: column;
+}
+  
+  .child-2 { 
+      grid-area: child-2;
+      background-color: rgb(57, 57, 230);
+      padding: 10px;
+ }
+  
+  .child3 { 
+      grid-area: child3;
+      background-color: rgb(45, 146, 45);
+      padding: 10px;
+ }
+  
+  .child-4 { 
+      grid-area: child-4;
+      background-color: rgb(228, 228, 58);
+      padding: 10px;
+ }
+  
+  .child-5 {
+      grid-area: child-5;
+      background-color: rgb(233, 70, 70);
+      padding: 10px;
+ }
+  .kartinka{
+      background: url(https://www.kino-teatr.ru/person/515/6157.jpg) center center no-repeat;
+      background-size: cover;
+      border-radius: 100%;
+      width: 50px;
+      height: 50px;
+  }
+  button{
+      width: 400px;
+      height: 50px;
+      background-color: white;
+  }
+  a{
+      color: black;
+  }
+
+  @media screen and (max-width: 767px) {
+    .container {
+        grid-template-areas:
+        "child-1"
+        "child-2"
+        "child-3"
+        "child-4"
+        "child-5";
+        color: white;
+        grid-template-columns: 1fr;
+        grid-template-rows: 400px 300px 300px 300px 300px;
+        gap: 10px;
+      }
+  }
